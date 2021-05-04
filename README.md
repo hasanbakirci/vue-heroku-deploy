@@ -27,10 +27,11 @@ npm run build
 Heroku'ya giriş yapalım `heroku login` ardından `heroku create` ile heroku projesi oluşturalım.
 projemizi push etmeden önce heroku'ya bir nodejs dosyası yüklüceğimizi belirtelim;
 
-`
-heroku buildpacks:add heroku/nodejs  
-heroku buildpacks:add [https://github.com/heroku/heroku-buildpack-static](https://github.com/heroku/heroku-buildpack-static)
-`
+
+`heroku buildpacks:add heroku/nodejs  `
+`heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static`
+
+
 Ve yükleme işlemini başlatalım `git push heroku master`
 ______________
 **Güncelleme işlemleri**
