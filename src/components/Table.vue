@@ -24,34 +24,11 @@ export default {
     data(){
     return { 
       urlSiparis: "https://cafeapp-for-django.herokuapp.com/api/siparisler/",
-      urlUrun: "https://cafeapp-for-django.herokuapp.com/api/urunler/",
       siparisler:[],
-      urunler:[],
-      deger: "bos"
       };
-  },
-  methods:{
-    hesapla(id){
-      switch(id){
-        case 1:
-          this.deger = "Çay"
-          break
-        case 2:
-          this.deger = "Türk Kahvesi"
-          break
-        case 4:
-          this.deger = "Limonata"
-          break
-        case 5:
-          this.deger = "Cappuccino"
-          break
-      }
-      return this.deger
-    },
   },
     created(){
     axios.get(this.urlSiparis).then(response => (this.siparisler = response.data))
-    axios.get(this.urlUrun).then(response => (this.urunler = response.data))
     }
 }
 </script>
